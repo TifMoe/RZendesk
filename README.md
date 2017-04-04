@@ -1,5 +1,5 @@
 # RZendesk
-Wrapper function for accessing Sittercity Zendesk API
+Wrapper function for accessing Sittercity Zendesk API in R
 
 ## Setup
 
