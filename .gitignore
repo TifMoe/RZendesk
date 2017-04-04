@@ -1,0 +1,48 @@
+# This file lets you ignore certain files from syncing with the Domino server.
+#
+# For more, read the help article here:
+# http://support.dominodatalab.com/hc/en-us/articles/207778003-How-to-prevent-syncing-certain-files-in-your-project
+
+# Domino
+.dominoresults
+.domino/
+domino.log
+dominodump-*
+results/
+domino.*
+.dominoignore
+
+# Source control
+.git
+.svn/
+
+# IntelliJ/PyCharm project files
+.idea/
+
+# Python
+*.pyc
+
+# R
+.Renviron
+.Rhistory
+*.r.Rout
+*.R.Rout
+*.Rproj
+.Rproj.user/
+.Rproj.user
+Rprof.out
+
+# Matlab/Octave
+octave-core
+*.asv
+*.m~
+
+# Mac OS X system files
+.DS_Store
+
+# General
+~*
+Logs/*.log
+Data/*.rds
+Data/*
+*.RData

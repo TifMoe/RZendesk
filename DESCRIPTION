@@ -1,0 +1,17 @@
+Package: RZendesk
+Type: Package
+Title: Zendesk SDK for R
+Version: 0.1.0
+Author: Tiffany Moeller
+Maintainer: Tiffany Moeller <tmoeller@sittercity.com>
+Description: Provides an interface for communicating with Zendesk API.
+    Currently, you can post a new ticket to Zendesk or get an existing ticket from Zendesk.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports:
+      rjson,
+      httr,
+      methods,
+      jsonlite
+RoxygenNote: 6.0.1
