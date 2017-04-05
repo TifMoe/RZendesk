@@ -4,7 +4,8 @@
 \alias{post_ticket}
 \title{Create a client connection to the Zendesk API}
 \usage{
-post_ticket(requester_name, requester_email, body, subject, cli = client())
+post_ticket(requester_name, requester_email, body, subject, tags = list(),
+  cli = client())
 }
 \arguments{
 \item{requester_name}{a string to identify customer who should be listed as ticket requester, with the ticket pointing to their account}
@@ -14,6 +15,8 @@ post_ticket(requester_name, requester_email, body, subject, cli = client())
 \item{body}{a character string that is passed to the body of the Zendesk ticket}
 
 \item{subject}{the subject of your Zendesk ticket}
+
+\item{tags}{a list of custom tags for the new ticket}
 
 \item{cli}{the Zendesk client [created from ::client]}
 }
