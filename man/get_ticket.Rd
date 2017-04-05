@@ -21,6 +21,6 @@ object with three attributes:
 Get a Zendesk ticket from API call by passing Zendesk ticket number
 }
 \examples{
-get_ticket('123455')
+get_ticket('123455', cli = client())
 
 }

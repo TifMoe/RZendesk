@@ -11,7 +11,7 @@
 #'     response - API response to request
 #'
 #' @examples
-#' get_ticket('123455')
+#' get_ticket('123455', cli = client())
 #'
 #' @export
 #'

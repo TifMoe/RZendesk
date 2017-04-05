@@ -6,6 +6,7 @@
 #' @param requester_email a string to identify customer who should be listed as ticket requester
 #' @param body a character string that is passed to the body of the Zendesk ticket
 #' @param subject the subject of your Zendesk ticket
+#' @param tags a list of custom tags for the new ticket
 #' @param cli the Zendesk client [created from ::client]
 #'
 #' @return Zendesk ticket number for successfully created ticket
@@ -20,13 +21,13 @@
 #'
 #' @export
 #'
-post_ticket <- function(requester_name, requester_email, body, subject, cli = client()) {
+post_ticket <- function(requester_name, requester_email, body, subject, tags = list(), cli = client()) {
       end_point <- '/tickets.json'
 
       response <- send(
             cli = cli,
             end_point = end_point,
-            body = prepare_data(requester_name, requester_email, body, subject)
+            body = prepare_data(requester_name, requester_email, body, subject, tags)
       )
 
       # check status and log id
@@ -42,11 +43,12 @@ post_ticket <- function(requester_name, requester_email, body, subject, cli = cl
 }
 
 
-prepare_data <- function(requester_name, requester_email, body, subject) {
+prepare_data <- function(requester_name, requester_email, body, subject, tags) {
       data <- list(ticket = list(
             requester = list(name = requester_name, email = requester_email),
             subject = subject,
-            comment = list(body = get_comment(body))
+            comment = list(body = get_comment(body),
+                           custom_fields = list(tags))
       ))
       return( rjson::toJSON(data) )
 }
