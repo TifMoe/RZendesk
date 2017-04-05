@@ -3,10 +3,11 @@ Wrapper function for accessing Sittercity Zendesk API in R
 
 ## Setup
 
-### 1) install and Load Library Locally
+### 1) Install and Load Library Locally
 Add library to your local project
 ```R
-devtools::install_github("tmoeller/RZendesk")
+# requires install.packages('devtools')
+devtools::install_github("TifMoe/RZendesk")
 library(RZendesk)
 ```
 
