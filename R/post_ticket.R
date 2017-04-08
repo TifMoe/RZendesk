@@ -61,7 +61,7 @@ prepare_data <- function(requester_name, requester_email, body, subject, group, 
       data <- list(ticket = list(
             requester = list(name = requester_name, email = requester_email),
             subject = subject,
-            comment = list(body = get_comment(body),
+            comment = list(body = body,
                            public = public),
             group_id = as.integer(group),
             tags = tags
@@ -71,9 +71,5 @@ prepare_data <- function(requester_name, requester_email, body, subject, group, 
 
 
 
-get_comment <- function(body){
-      comment = paste('This member was flagged for:', body, sep = " ")
-      return(comment)
-}
 
 
