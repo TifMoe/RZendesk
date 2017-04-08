@@ -4,11 +4,11 @@
 \alias{post_ticket}
 \title{Create a client connection to the Zendesk API}
 \usage{
-post_ticket(requester_name, requester_email, body, subject, tags = list(),
-  cli = client())
+post_ticket(requester_name, requester_email, body, subject, group,
+  tags = list(), public, cli = client())
 }
 \arguments{
-\item{requester_name}{a string to identify customer who should be listed as ticket requester, with the ticket pointing to their account}
+\item{requester_name}{a string to identify customer who should be listed as ticket requester (optional, if NULL the email will pull in corresponding name)}
 
 \item{requester_email}{a string to identify customer who should be listed as ticket requester}
 
@@ -16,7 +16,11 @@ post_ticket(requester_name, requester_email, body, subject, tags = list(),
 
 \item{subject}{the subject of your Zendesk ticket}
 
-\item{tags}{a list of custom tags for the new ticket}
+\item{group}{an integer to indicate the group_id for your new ticket (optional, can be set to NULL)}
+
+\item{tags}{a list of character strings to set as the ticket tags for your new ticket (optional, can be set to NULL)}
+
+\item{public}{an optional logical value to indicate if the ticket comment should be public (TRUE) or privet (FALSE), default value FALSE}
 
 \item{cli}{the Zendesk client [created from ::client]}
 }
@@ -31,7 +35,10 @@ post_ticket(
   requester_name = 'fake_name',
   requester_email = 'fake_email',
   body = 'comment in body of ticket',
-  subject = 'subject of ticket'
+  subject = 'subject of ticket',
+  group = 1234567,
+  tags = list(),
+  public = FALSE
 )
 
 }
