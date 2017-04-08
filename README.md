@@ -11,6 +11,8 @@ devtools::install_github("TifMoe/RZendesk")
 library(RZendesk)
 ```
 
+#### This package was initially created as a useful tool for myself and will evolve over time as more functionality is added. Please don't hesitate to reach out to me if there's a particular function you're looking for.
+
 ### 2) Setup Environmental Variables
 ```
 ZENDESK_USER= 'valid Zendesk username'/token
@@ -54,7 +56,10 @@ post_ticket(
       requester_name = 'fake_name',
       requester_email = 'fake_email',
       body = 'comment in body of ticket',
-      subject = 'subject of ticket'
+      subject = 'subject of ticket',
+      group = 1234567,
+      tags = list('tag1','tag2','tag3'),
+      public = FALSE
 )
 ```
-#### Additional parameters will be added later
+#### The group, tags and public parameters are all optional and can be set to NULL or left out entirely. The public parameter will be set to 'FALSE' by default, creating a private comment in the new ticket. 
