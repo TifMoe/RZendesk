@@ -11,7 +11,7 @@ devtools::install_github("TifMoe/RZendesk")
 library(RZendesk)
 ```
 
-#### This package was initially created as a useful tool for myself and will evolve over time as more functionality is added. Please don't hesitate to reach out to me if there's a particular function you're looking for.
+This package was initially created as a useful tool for myself and will evolve over time as more functionality is added. Please don't hesitate to reach out to me if there's a particular function you're looking for.
 
 ### 2) Setup Environmental Variables
 ```
