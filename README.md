@@ -62,4 +62,4 @@ post_ticket(
       public = FALSE
 )
 ```
-#### The group, tags and public parameters are all optional and can be set to NULL or left out entirely. The public parameter will be set to 'FALSE' by default, creating a private comment in the new ticket. 
+The group, tags and public parameters are all optional and can be set to NULL or left out entirely. The public parameter will be set to 'FALSE' by default, creating a private comment in the new ticket. 
